@@ -13,31 +13,48 @@ import { NextIntlClientProvider } from "next-intl";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "renato.dev | Portfolio",
+  title: "Renato Rocha | Frontend & Mobile Developer",
   description:
-    "Portfolio of Renato Rocha, a software developer specializing in Front-end and Mobile development with expertise in technologies like React, Next.js, and more.",
+    "Portfolio of Renato Rocha, a software developer specializing in Frontend and Mobile development. Expert in React, Next.js, TypeScript, and Android development.",
   keywords: [
     "Renato Rocha",
-    "Front-end Developer",
-    "Portfolio",
-    "React",
-    "Next.js",
-    "Web Developer",
+    "Frontend Developer",
+    "Mobile Developer",
+    "React Developer",
+    "Next.js Developer",
+    "TypeScript",
+    "Android Developer",
+    "Web Development",
+    "Software Engineer",
+    "Brazil Developer",
   ],
+  authors: [{ name: "Renato Rocha", url: "https://renatodev.com" }],
+  creator: "Renato Rocha",
+  publisher: "Renato Rocha",
   openGraph: {
-    title: "renato.dev | Portfolio",
+    type: "website",
+    locale: "pt_BR",
+    alternateLocale: "en_US",
+    title: "Renato Rocha | Frontend & Mobile Developer",
     description:
-      "Explore the portfolio of Renato Rocha, a developer dedicated to creating amazing experiences on the web and mobile devices.",
+      "Explore the portfolio of Renato Rocha, a developer specialized in creating amazing experiences on web and mobile platforms using React, Next.js, and Android.",
     url: "https://renatodev.com",
-    siteName: "renato.dev",
+    siteName: "Renato Rocha Portfolio",
     images: [
       {
         url: "/project-screenshot.png",
         width: 1200,
         height: 630,
-        alt: "Renato Rocha - Developer",
+        alt: "Renato Rocha - Frontend & Mobile Developer Portfolio",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Renato Rocha | Frontend & Mobile Developer",
+    description:
+      "Frontend & Mobile developer specialized in React, Next.js, and Android development.",
+    images: ["/project-screenshot.png"],
   },
 };
 
