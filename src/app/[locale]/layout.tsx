@@ -73,6 +73,12 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
+      <head>
+        <meta
+          name="google-site-verification"
+          content="zaHfJlY0IXdmPkqIWgyJD0Fjh31bj62sYNyVF4GPGnQ"
+        />
+      </head>
       <body
         className={cn(
           inter.className,
