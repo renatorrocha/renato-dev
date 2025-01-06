@@ -10,6 +10,8 @@ export const BLUR_FADE_DELAY = 0.1;
 
 export const DATA = {
   name: "Renato Rocha Rodrigues",
+  curriculum:
+    "https://docs.google.com/document/d/e/2PACX-1vQ8VnICtB7Zcr9pAt-S3Yup8rPcdtH1xpia3WEHt8QmRCye7PYvB7ApmNPRS0oR-P-E9IwuaO8vc1tl/pub",
   initials: "RR",
   avatarUrl: "/my-pic.jpg",
   resume:

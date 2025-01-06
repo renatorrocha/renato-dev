@@ -12,6 +12,7 @@ import { DATA } from "@/lib/constants";
 import ThemeToggle from "./theme-toggle";
 import { useTranslations } from "next-intl";
 import LanguageSwitch from "./language-switch";
+import { FileTextIcon } from "@radix-ui/react-icons";
 
 export default function Navbar() {
   const t = useTranslations("Labels");
@@ -63,6 +64,27 @@ export default function Navbar() {
               </Tooltip>
             </DockIcon>
           ))}
+
+        <DockIcon>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Link
+                href={DATA.curriculum}
+                target="_blank"
+                className={cn(
+                  buttonVariants({ variant: "ghost", size: "icon" }),
+                  "text-primary/70 hover:text-secondary",
+                )}
+              >
+                <FileTextIcon className="size-4" />
+              </Link>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>{t("curriculum")}</p>
+            </TooltipContent>
+          </Tooltip>
+        </DockIcon>
+
         <Separator orientation="vertical" className="h-full py-2" />
         <DockIcon>
           <Tooltip>

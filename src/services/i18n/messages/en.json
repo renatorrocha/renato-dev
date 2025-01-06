@@ -1,7 +1,8 @@
 {
   "Labels": {
     "changeTheme": "Change Theme",
-    "changeLanguage": "Change Theme"
+    "changeLanguage": "Change Theme",
+    "curriculum": "Curriculum"
   },
   "Hero": {
     "greeting": "Hi, I'm Renato 👋",
