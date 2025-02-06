@@ -8,7 +8,7 @@ const nextConfig = {
     return [
       {
         source: "/",
-        destination: "https://renatodev.com/",
+        destination: "https://renatodev.com/en",
         permanent: true,
       },
     ];
