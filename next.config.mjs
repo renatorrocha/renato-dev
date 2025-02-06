@@ -4,15 +4,15 @@ const withNextIntl = createNextIntlPlugin("./src/services/i18n/request.ts");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  async redirects() {
-    return [
-      {
-        source: "/",
-        destination: "https://renatodev.com/en",
-        permanent: true,
-      },
-    ];
-  },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: "/",
+  //       destination: "https://renatodev.com/en",
+  //       permanent: true,
+  //     },
+  //   ];
+  // },
 };
 
 export default withNextIntl(nextConfig);
