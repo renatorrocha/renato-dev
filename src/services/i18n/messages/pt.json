@@ -30,12 +30,12 @@
       {
         "company": "Findes",
         "href": "https://findes.com.br/",
-        "badges": ["React", "Typescript", "Docker"],
+        "badges": ["React", "Nest.js", "Docker"],
         "logoUrl": "/findes.png",
         "start": "Ago 2023",
         "end": "Atual",
         "title": "Desenvolvedor de Software",
-        "description": "Trabalhando em projetos de desenvolvimento de software como estagiário de desenvolvimento web, com foco no front-end utilizando TypeScript, criando telas responsivas alinhadas com as preferências e solicitações dos clientes. Desenvolvimento de projetos utilizando:\n\n- React (com bibliotecas como Zod e React Hook Form)\n- Vite/Next.js\n- Zod\n- React Hook Form\n- Tanstack Query + Router\n- Styled-Components\n- Material UI\n- TypeScript\n- Docker\n- Metodologia Ágil"
+        "description": "Trabalhando em projetos de desenvolvimento web full-stack, com foco principal no front-end utilizando TypeScript. Responsável por criar interfaces responsivas e modernas alinhadas com as necessidades dos clientes, além de contribuir com o desenvolvimento backend. Principais tecnologias e ferramentas:\n\n**Frontend:**\n- React com TypeScript\n- Next.js e Vite\n- Tanstack Query + Router\n- React Hook Form + Zod\n- Material UI e Styled-Components\n- TailwindCSS\n- Shadcn UI\n- Zustand\n\n**Backend:**\n- Nest.js\n- Prisma ORM\n- Docker\n\n**Metodologias:**\n- Scrum/Agile\n- Versionamento com Git"
       }
     ]
   },

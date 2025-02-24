@@ -30,12 +30,12 @@
       {
         "company": "Findes",
         "href": "https://findes.com.br/",
-        "badges": ["React", "Typescript", "Docker"],
+        "badges": ["React", "Nest.js", "Docker"],
         "logoUrl": "/findes.png",
         "start": "Aug 2023",
         "end": "Present",
         "title": "Software Developer",
-        "description": "Working on software development projects as a web development intern, focusing on the front-end with TypeScript, creating responsive screens aligned with client preferences and requests. Development of projects using:\n\n- React (with libraries like Zod and React Hook Form)\n- Vite/Next.js\n- Zod\n- React Hook Form\n- Tanstack Query + Router\n- Styled-Components\n- Material UI\n- TypeScript\n- Docker\n- Agile Methodology"
+        "description": "Working on full-stack web development projects, with a primary focus on frontend using TypeScript. Responsible for creating responsive and modern interfaces aligned with client needs, while also contributing to backend development. Main technologies and tools:\n\n**Frontend:**\n- React with TypeScript\n- Next.js and Vite\n- Tanstack Query + Router\n- React Hook Form + Zod\n- Material UI and Styled-Components\n- TailwindCSS\n- Shadcn UI\n- Zustand\n\n**Backend:**\n- Nest.js\n- Prisma ORM\n- Docker\n\n**Methodologies:**\n- Scrum/Agile\n- Git versioning"
       }
     ]
   },
