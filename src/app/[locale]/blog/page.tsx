@@ -48,7 +48,11 @@ export default async function BlogPage({
               </BlurFade>
             ))
           ) : (
-            <p className="text-center text-muted-foreground">{t("noPosts")}</p>
+            <BlurFadeText
+              className="mx-auto text-center text-muted-foreground"
+              delay={BLUR_FADE_DELAY + 1}
+              text={t("noPosts")}
+            />
           )}
         </div>
       </div>
