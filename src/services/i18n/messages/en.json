@@ -154,6 +154,8 @@
 
   "Blog": {
     "title": "Blog",
-    "description": "Here are some of my latest articles."
+    "description": "Here are some of my latest articles.",
+    "noPosts": "No posts found"
+
   }
 }

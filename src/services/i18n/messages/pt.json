@@ -158,6 +158,7 @@
 
   "Blog": {
     "title": "Blog",
-    "description": "Aqui estão alguns dos meus artigos mais recentes."
+    "description": "Aqui estão alguns dos meus artigos mais recentes.",
+    "noPosts": "Nenhum post encontrado"
   }
 }

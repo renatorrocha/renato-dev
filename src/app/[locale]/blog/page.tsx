@@ -2,28 +2,16 @@ import { BlogCard } from "@/components/blog-card";
 import BlurFade from "@/components/blur-fade";
 import BlurFadeText from "@/components/blur-fade-text";
 import { BLUR_FADE_DELAY } from "@/lib/constants";
-import { useTranslations } from "next-intl";
+import { getAllPosts } from "@/services/blog/get-all-posts";
+import { getTranslations } from "next-intl/server";
 
-const posts = [
-  {
-    title: "My First Post",
-    description: "This is my first post",
-    date: "2021-01-01",
-  },
-  {
-    title: "My Second Post",
-    description: "This is my second post",
-    date: "2021-01-02",
-  },
-  {
-    title: "My Third Post",
-    tags: ["tag1", "tag2", "tag3"],
-    date: "2021-01-03",
-  },
-];
-
-export default function BlogPage() {
-  const t = useTranslations("Blog");
+export default async function BlogPage({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  const posts = await getAllPosts(params.locale);
+  const t = await getTranslations("Blog");
 
   return (
     <section id="blog">
@@ -44,20 +32,24 @@ export default function BlogPage() {
         </div>
 
         <div className="flex flex-col gap-4">
-          {posts.map((post, idx) => (
-            <BlurFade
-              key={post.title}
-              delay={BLUR_FADE_DELAY * 10 + idx * 0.05}
-            >
-              <BlogCard
-                key={post.title}
-                title={post.title}
-                description={post.description}
-                date={new Date(post.date)}
-                href={`/blog/${post.title}`}
-              />
-            </BlurFade>
-          ))}
+          {posts.length > 0 ? (
+            posts.map((post, idx) => (
+              <BlurFade
+                key={post?.meta.title}
+                delay={BLUR_FADE_DELAY * 8 + idx * 0.05}
+              >
+                <BlogCard
+                  key={post?.meta.title}
+                  title={post?.meta.title ?? ""}
+                  description={post?.meta.description ?? ""}
+                  date={new Date(post?.meta.date ?? "")}
+                  href={`/blog/${post?.meta.title}`}
+                />
+              </BlurFade>
+            ))
+          ) : (
+            <p>{t("noPosts")}</p>
+          )}
         </div>
       </div>
     </section>
