@@ -48,7 +48,7 @@ export default async function BlogPage({
               </BlurFade>
             ))
           ) : (
-            <p>{t("noPosts")}</p>
+            <p className="text-center text-muted-foreground">{t("noPosts")}</p>
           )}
         </div>
       </div>
