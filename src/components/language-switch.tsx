@@ -3,15 +3,16 @@
 import * as Flags from "country-flag-icons/react/3x2";
 import { Button } from "@/components/ui/button";
 import { useLocale } from "next-intl";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "@/services/i18n/navigation";
 
 export default function LanguageSwitch() {
   const language = useLocale();
+  const pathname = usePathname();
   const router = useRouter();
 
   function toggleLanguage() {
     const newLanguage = language === "en" ? "pt" : "en";
-    router.push(newLanguage);
+    router.replace(pathname, { locale: newLanguage });
   }
 
   return (
