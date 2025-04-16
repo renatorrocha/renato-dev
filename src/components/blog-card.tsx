@@ -30,7 +30,9 @@ export function BlogCard({ title, href, description, date }: IBlogCard) {
         }
       >
         <CardHeader className="px-2">
-          <CardTitle className="mt-1 text-base">{title}</CardTitle>
+          <CardTitle className="mt-1 text-base text-primary dark:text-secondary">
+            {title}
+          </CardTitle>
         </CardHeader>
 
         {description && (

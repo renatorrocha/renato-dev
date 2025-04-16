@@ -24,7 +24,7 @@ export default async function BlogPage({
         />
 
         <BlurFadeText
-          className="max-w-[600px] text-secondary md:text-xl"
+          className="max-w-[600px] text-primary/80 md:text-xl"
           delay={BLUR_FADE_DELAY}
           text={t("description")}
         />
