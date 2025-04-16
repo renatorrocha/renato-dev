@@ -39,11 +39,11 @@ export default async function BlogPage({
                 delay={BLUR_FADE_DELAY * 8 + idx * 0.05}
               >
                 <BlogCard
-                  key={post?.meta.title}
+                  key={post?.slug}
                   title={post?.meta.title ?? ""}
                   description={post?.meta.description ?? ""}
                   date={new Date(post?.meta.date ?? "")}
-                  href={`/blog/${post?.meta.title}`}
+                  href={`/blog/${post?.slug}`}
                 />
               </BlurFade>
             ))
