@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import { Link } from "@/services/i18n/navigation";
 import { getTranslations } from "next-intl/server";
+import { Separator } from "@/components/ui/separator";
 
 export default async function BlogPostPage({
   params,
@@ -34,10 +35,12 @@ export default async function BlogPostPage({
         </Link>
       </BlurFade>
 
+      <Separator className="mb-4" />
+
       <div className="flex flex-col">
         <BlurFadeText
           delay={BLUR_FADE_DELAY}
-          className="text-lg font-bold tracking-tighter sm:text-2xl xl:text-3xl/none"
+          className="text-lg font-bold tracking-tighter text-primary sm:text-2xl xl:text-3xl/none"
           yOffset={8}
           text={post?.meta.title}
         />
@@ -55,7 +58,7 @@ export default async function BlogPostPage({
           delay={BLUR_FADE_DELAY * 8}
           className="mt-4"
         >
-          <Markdown className="prose dark:prose-invert max-w-full text-pretty rounded-md border bg-primary-foreground p-2 font-sans text-sm text-secondary">
+          <Markdown className="prose dark:prose-invert max-w-full text-pretty rounded-md border bg-primary/10 p-2 font-sans text-sm text-secondary-foreground dark:bg-primary-foreground/20 dark:text-secondary">
             {post?.content}
           </Markdown>
         </BlurFade>
