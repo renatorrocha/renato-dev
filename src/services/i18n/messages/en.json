@@ -150,5 +150,12 @@
         "video": ""
       }
     ]
+  },
+
+  "Blog": {
+    "title": "Blog",
+    "description": "Here are some of my latest articles.",
+    "noPosts": "No posts found",
+    "backToBlog": "Back to blog"
   }
 }

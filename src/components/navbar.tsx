@@ -1,3 +1,5 @@
+"use client";
+
 import { buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -6,13 +8,13 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 import { Dock, DockIcon } from "./dock";
 import { DATA } from "@/lib/constants";
 import ThemeToggle from "./theme-toggle";
 import { useTranslations } from "next-intl";
 import LanguageSwitch from "./language-switch";
 import { FileTextIcon } from "@radix-ui/react-icons";
+import { Link } from "@/services/i18n/navigation";
 
 export default function Navbar() {
   const t = useTranslations("Labels");

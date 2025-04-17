@@ -10,7 +10,7 @@ export default function HeroSection() {
 
   return (
     <section id="hero">
-      <div className="mx-auto w-full max-w-2xl space-y-8">
+      <div className="mx-auto w-full space-y-8">
         <div className="flex flex-col-reverse items-center justify-between gap-4 sm:flex-row sm:items-start sm:gap-2">
           <div className="flex flex-1 flex-col space-y-1.5">
             <BlurFadeText

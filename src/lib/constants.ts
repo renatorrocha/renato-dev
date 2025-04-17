@@ -4,7 +4,7 @@ import {
   HomeIcon,
   LinkedInLogoIcon,
 } from "@radix-ui/react-icons";
-import { GiNotebook } from "react-icons/gi";
+import { GiNotebook, GiRss } from "react-icons/gi";
 
 export const BLUR_FADE_DELAY = 0.1;
 
@@ -49,11 +49,11 @@ export const DATA = {
       icon: HomeIcon,
       label: "Home",
     },
-    // {
-    //   href: "/blog",
-    //   icon: FileTextIcon,
-    //   label: "Blog",
-    // },
+    {
+      href: "/blog",
+      icon: GiRss,
+      label: "Blog",
+    },
   ],
   contact: {
     email: "renatorrodrigues2002@gmail.com",
