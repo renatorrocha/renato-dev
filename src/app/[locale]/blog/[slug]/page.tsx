@@ -3,7 +3,7 @@ import BlurFadeText from "@/components/blur-fade-text";
 import { BLUR_FADE_DELAY } from "@/lib/constants";
 import { getPost } from "@/services/blog/get-post";
 import Markdown from "react-markdown";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import { Link } from "@/services/i18n/navigation";
 import { getTranslations } from "next-intl/server";
@@ -18,7 +18,14 @@ export default async function BlogPostPage({
   const t = await getTranslations("Blog");
 
   if (!post) {
-    return <div>Post not found</div>;
+    return (
+      <div className="flex h-full flex-col items-center justify-center text-center">
+        <p className="text-2xl">Post not found</p>
+        <Link href={"/blog"} className={buttonVariants({ variant: "ghost" })}>
+          Back to blog
+        </Link>
+      </div>
+    );
   }
 
   return (
@@ -35,7 +42,7 @@ export default async function BlogPostPage({
         </Link>
       </BlurFade>
 
-      <Separator className="mb-4" />
+      <Separator className="mb-6" />
 
       <div className="flex flex-col">
         <BlurFadeText
@@ -56,11 +63,13 @@ export default async function BlogPostPage({
         <BlurFade
           key={post?.meta.title}
           delay={BLUR_FADE_DELAY * 8}
-          className="mt-4"
+          className="mt-8"
         >
-          <Markdown className="prose dark:prose-invert max-w-full text-pretty rounded-md border bg-primary/10 p-2 font-sans text-sm text-secondary-foreground dark:bg-primary-foreground/20 dark:text-secondary">
-            {post?.content}
-          </Markdown>
+          <div className="blog-content rounded-md border bg-primary/5 p-6 dark:bg-primary-foreground/10">
+            <Markdown className="prose prose-slate dark:prose-invert prose-p:text-base prose-p:leading-relaxed prose-p:my-5 prose-strong:font-bold prose-strong:text-primary prose-headings:font-semibold prose-headings:tracking-tight prose-headings:text-primary prose-h1:text-2xl prose-h1:mt-8 prose-h1:mb-4 prose-h2:text-xl prose-h2:mt-6 prose-h2:mb-3 prose-h3:text-lg prose-h3:mt-5 prose-h3:mb-2 prose-a:text-primary hover:prose-a:underline max-w-none text-secondary-foreground dark:text-secondary">
+              {post?.content}
+            </Markdown>
+          </div>
         </BlurFade>
       </div>
     </section>
