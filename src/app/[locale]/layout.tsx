@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     siteName: "Renato Rocha Portfolio",
     images: [
       {
-        url: "/project-screenshot.png",
+        url: "https://renatodev.com/icon.svg",
         width: 1200,
         height: 630,
         alt: "Renato Rocha - Frontend & Mobile Developer Portfolio",
